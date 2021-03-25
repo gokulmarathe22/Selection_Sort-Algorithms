@@ -1,0 +1,28 @@
+def selected_sort(arr):
+    size = len(arr)
+    for i in range(size):
+        min_index = i
+        #print(min_index)
+        #print(arr[i])
+
+        for j in range(min_index+1,size):
+            if arr[j] < arr[min_index]:
+                min_index = j
+                #print(arr[j],end=" ")
+
+            if i != min_index:
+                arr[i],arr[min_index] = arr[min_index],arr[i]
+
+
+
+
+
+
+if __name__ == '__main__':
+
+    element = [45,65,87,9,12,63,4,98,32]
+    selected_sort(element)
+    print(element)
+    
+    
+    
